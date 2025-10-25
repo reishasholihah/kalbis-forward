@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kalbis</title>
+    <title>Kalbis University</title>
     <meta
       name="kalbis"
       content="Universitas KALBIS merupakan universitas swasta yang dikelola secara profesional oleh Yayasan Triputra Persada Horizon Education."
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/512.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" href="images/favicon/icon.png" type="image/png" />
+    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -19,94 +26,134 @@
       <div class="header-container">
         <nav class="navbar">
           <img
-            src="images/homepage/KU_MAIN-V-qih6lkib1yxjxy4dgrudm6krndqla7clg3s2txj0u8.png"
+            src="images/homepage/KU_MAIN-V.png"
             class="navbar-logo"
-            alt="Kalbis Univerity Logo"
+            alt="Kalbis University Logo"
           />
-          <ul class="navbar-menu">
-            <li class="navbar-item">
-              <a href="#tentangKalbis" class="navbar-link">Tentang Kalbis</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#program" class="navbar-link">Program</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#testimoni" class="navbar-link">Testimoni</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#partnerKami" class="navbar-link">Partner Kami</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#beritaAcara" class="navbar-link">Berita dan Acara</a>
-            </li>
-          </ul>
-          <a
-            href="https://share.hsforms.com/1gylb_80wSne8jzME4CsdiAdu1n5"
-            class="button"
-            >Daftar Sekarang</a
-          >
+
+          <div class="navbar-desktop">
+            <ul class="navbar-menu">
+              <li class="navbar-item">
+                <a href="#tentangKalbis" class="navbar-link">Tentang Kalbis</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#program" class="navbar-link">Program</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#testimoni" class="navbar-link">Testimoni</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#partnerKami" class="navbar-link">Partner Kami</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#beritaAcara" class="navbar-link">Berita dan Acara</a>
+              </li>
+            </ul>
+            <a
+              href="https://share.hsforms.com/1gylb_80wSne8jzME4CsdiAdu1n5"
+              class="button desktop-cta"
+              >Daftar Sekarang</a
+            >
+          </div>
+
+          <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <svg id="hamburger" viewBox="0 0 60 40" class="hamburger-svg">
+              <g stroke="#2C3E50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path id="top-line" d="M10,10 L50,10"></path>
+                <path id="middle-line" d="M10,20 L50,20"></path>
+                <path id="bottom-line" d="M10,30 L50,30"></path>
+              </g>
+            </svg>
+          </button>
+
+          <div class="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+              <ul class="mobile-nav-list">
+                <li><a href="#tentangKalbis">Tentang Kalbis <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#program">Program <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#testimoni">Testimoni <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#partnerKami">Partner Kami <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#beritaAcara">Berita dan Acara <i class="fa-solid fa-angle-right"></i></a></li>
+              </ul>
+              <a href="https://share.hsforms.com/1gylb_80wSne8jzME4CsdiAdu1n5" class="button mobile-cta">
+                Daftar Sekarang
+              </a>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="banner">
-        <div>
-          <img
-            src="images/homepage/banner-web-3.png"
-            alt="Banner Pendaftaran Mahasiswa Baru Kalbis"
-          />
-          <img
-            src="images/homepage/banner-web-4.png"
-            alt="Banner Entrepreneurship"
-          />
-          <img src="images/homepage/kk-webbb.png" alt="Banner Kelas Karyawan" />
+      <section class="banner-carousel" id="banner">
+        <div class="carousel-container">
+          <div class="carousel-slides">
+            <div class="slide active">
+              <img
+                src="images/homepage/banner-web-3.png"
+                alt="Banner Pendaftaran Mahasiswa Baru Kalbis"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="images/homepage/kk-webbb.png"
+                alt="Banner Kelas Karyawan"
+              />
+            </div>
+          </div>
+          <div class="carousel-progress">
+            <div class="progress-bar"></div>
+          </div>
         </div>
       </section>
 
       <section class="about-section">
         <div class="about-container" id="tentangKalbis">
-          <h2 class="section-title">Tentang Universitas Kalbis</h2>
-          <p class="section-description">
-            Universitas KALBIS merupakan universitas swasta yang dikelola secara
-            profesional oleh Yayasan Triputra Persada Horizon Education.
-          </p>
-          <p>
-            Saat ini, Universitas KALBIS menawarkan delapan program sarjana di
-            bidang Manajemen, Akuntansi, Ilmu Komunikasi, Informatika, Sistem
-            Informasi, dan Desain Komunikasi Visual, Psikologi, Pariwisata serta
-            program Pascasarjana
-          </p>
-          <a href="#" class="about-link">Baca Selengkapnya</a>
-        </div>
-        <div class="about-video">
-          <iframe
-            width="853"
-            height="480"
-            src="https://www.youtube.com/embed/jFFPYjUdBJ0"
-            title="KALBIS University Story"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <div class="about-text">
+            <h2 class="program-title">Tentang Universitas KALBIS</h2>
+            <p class="section-description">
+              Universitas KALBIS merupakan universitas swasta yang dikelola secara
+              profesional oleh Yayasan Triputra Persada Horizon Education.
+            </p>
+            <p>
+              Saat ini, Universitas KALBIS menawarkan delapan program sarjana di
+              bidang Manajemen, Akuntansi, Ilmu Komunikasi, Informatika, Sistem
+              Informasi, dan Desain Komunikasi Visual, Psikologi, Pariwisata serta
+              program Pascasarjana.
+            </p>
+            <a href="#" class="about-link">Baca Selengkapnya</a>
+          </div>
+          <div class="about-video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/jFFPYjUdBJ0"
+              title="KALBIS University Story"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </section>
 
       <section class="program-section">
         <div class="program-container" id="program">
-          <h2 class="program-title">Belajar di Universitas Kalbis</h2>
-          <p>
-            Proses belajar di Universitas KALBIS membekali mahasiswa untuk
-            menjadi generasi penerus yang mampu memberikan kontribusi signifikan
-            di ranah pekerjaan, masyarakat, dan untuk kemajuan bangsa serta
-            negara.
-          </p>
-          <p>
-            Dengan beragam program gelar yang tersedia, Universitas KALBIS
-            membaginya dalam dua Seolah yang berfokus, yaitu Sekolah Bisnis &
-            Komunikasi serta Sekolah Ilmu Komputer & Desain.
-          </p>
-          <a href="#" class="about-link">Baca Selengkapnya</a>
+          <div class="program-text">
+            <h2 class="program-title">Belajar di Universitas Kalbis</h2>
+            <p class="section-description">
+              Proses belajar di Universitas KALBIS membekali mahasiswa untuk
+              menjadi generasi penerus yang mampu memberikan kontribusi signifikan
+              di ranah pekerjaan, masyarakat, dan untuk kemajuan bangsa serta
+              negara.
+            </p>
+            <p>
+              Dengan beragam program gelar yang tersedia, Universitas KALBIS
+              membaginya dalam dua Sekolah yang berfokus, yaitu Sekolah Bisnis &
+              Komunikasi serta Sekolah Ilmu Komputer & Desain.
+            </p>
+            <a href="#" class="about-link">Baca Selengkapnya</a>
+          </div>
           <div class="program-card">
             <div class="program-s1">
               <a href="">
@@ -128,129 +175,206 @@
         </div>
       </section>
 
-      <section class="testimoni-section">
-        <div class="testimoni-container" id="testimoni">
-          <div class="testimoni-card">
-            <div class="testimoni-text">
-              <p>
-                "I really enjoyed was I studied at KALBIS in 2 years. I am sure
-                everything that I got from all lectures and my colleague can
-                bring me to be a better person in intellectual and mental."
-              </p>
-            </div>
-            <div class="author-picture">
-              <img
-                src="images/homepage/martinus.png"
-                alt="Foto Martinus Livino"
-              />
-              <div class="author-name">
-                <p>Martinus Livino, S.Kom., M.M., AAAIK.</p>
-              </div>
-              <div class="author-info">
+      <section class="testimoni-section" id="testimoni">
+        <h2 class="section-title">Testimoni Alumni</h2>
+        <div class="testimoni-carousel">
+          <div class="carousel-track" id="testimoni-track">
+            <div class="testimoni-card">
+              <div class="testimoni-text">
                 <p>
-                  Marketing & Sales Section Head Finance & Leasing PT. Asuransi
-                  Wahana Tata
+                  I really enjoyed was I studied at KALBIS in 2 years. I am sure
+                  everything that I got from all lectures and my colleague can bring
+                  me to be a better person in intellectual and mental.
                 </p>
               </div>
-            </div>
-          </div>
-          <div class="testimoni-card">
-            <div class="testimoni-text">
-              <p>
-                "Kuliah di Kalbis bikin aku jadi orang yang mau belajar, soalnya
-                kalo kuliah di sini nggak bisa nyontek. Aku selama kuliah di
-                sini, kalau ujian ngga pernah nyontek sama sekali. Jadi mau
-                tidak mau aku belajar, soalnya waktu dulu kalau jaman sekolah
-                pasti ada aja nyontek..."
-              </p>
-            </div>
-            <div class="author-picture">
-              <img src="images/homepage/anya.png" alt="Foto Anya Geraldine" />
-              <div class="author-name">
-                <p>Anya Geraldine</p>
-              </div>
-              <div class="author-info">
-                <p>Publik Figur</p>
+              <div class="author-picture">
+                <img
+                  src="images/homepage/martinus.png"
+                  alt="Foto Martinus Livino"
+                />
+                <div class="author-details">
+                  <p class="author-name">Martinus Livino, S.Kom., M.M., AAAIK.</p>
+                  <p class="author-info">
+                    Marketing & Sales Section Head Finance & Leasing PT. Asuransi
+                    Wahana Tata
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimoni-card">
-            <div class="testimoni-text">
-              <p>
-                What I love the most about Kalbis is the supportive environment.
-                I really adore the lecturer and how amazing they are in
-                teaching. I always enjoy the classroom activities. Even though
-                the class is held virtually, the discussions are always
-                fruitful. Also another cool thing is that my lecturers own
-                instagram account and we follow each other there. We often reply
-                to each other's instagram story but when it comes to teaching,
-                they are very discipline and strict. I really appreciate the
-                professionalism they bring in class but we can still be friends
-                outside the classroom.
-              </p>
-            </div>
-            <div class="author-picture">
-              <img
-                src="images/homepage/alicia.png"
-                alt="Foto Alicia Beverly Weley"
-              />
-              <div class="author-name">
-                <p>Alicia Beverly Weley</p>
+
+            <div class="testimoni-card">
+              <div class="testimoni-text">
+                <p>
+                  Kuliah di Kalbis bikin aku jadi orang yang mau belajar, soalnya
+                  kalo kuliah di sini nggak bisa nyontek...
+                </p>
               </div>
-              <div class="author-info">
-                <p>Magister Management Student</p>
+              <div class="author-picture">
+                <img src="images/homepage/anya.png" alt="Foto Anya Geraldine" />
+                <div class="author-details">
+                  <p class="author-name">Anya Geraldine</p>
+                  <p class="author-info">Public Figure</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimoni-card">
-            <div class="testimoni-text">
-              <p>
-                KALBIS has helped me to deepen and broaden my leadership skill,
-                and fokus on the holistic picture. In addition to learning new
-                concepts, theories, and skills, I have learned a tremendous
-                amount about myself. I am able to take these learnings and apply
-                not just to my professional career but to improving every facet
-                on my life.
-              </p>
+
+            <div class="testimoni-card">
+              <div class="testimoni-text">
+                <p>
+                  What I love the most about Kalbis is the supportive environment. I
+                  really adore the lecturer and how amazing they are in teaching...
+                </p>
+              </div>
+              <div class="author-picture">
+                <img
+                  src="images/homepage/alicia.png"
+                  alt="Foto Alicia Beverly Weley"
+                />
+                <div class="author-details">
+                  <p class="author-name">Alicia Beverly Weley</p>
+                  <p class="author-info">Magister Management Student</p>
+                </div>
+              </div>
             </div>
-            <div class="author-picture">
-              <img
-                src="images/homepage/reyna.png"
-                alt="Foto Reyna Septina Budiyanti"
-              />
+
+            <div class="testimoni-card">
+              <div class="testimoni-text">
+                <p>
+                  KALBIS has helped me to deepen and broaden my leadership skill,
+                  and fokus on the holistic picture...
+                </p>
+              </div>
+              <div class="author-picture">
+                <img
+                  src="images/homepage/reyna.png"
+                  alt="Foto Reyna Septina Budiyanti"
+                />
+                <div class="author-details">
+                  <p class="author-name">Reyna Septina Budiyanti</p>
+                  <p class="author-info">
+                    APAC EMEA Business Relations Senior Manager, Google, Inc.,
+                    Silicon Valley, USA
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="author-name">
-              <p>Reyna Septina Budiyanti</p>
+
+            <div class="testimoni-card">
+              <div class="testimoni-text">
+                <p>
+                  I really enjoyed was I studied at KALBIS in 2 years. I am sure
+                  everything that I got from all lectures and my colleague can bring
+                  me to be a better person in intellectual and mental.
+                </p>
+              </div>
+              <div class="author-picture">
+                <img
+                  src="images/homepage/martinus.png"
+                  alt="Foto Martinus Livino"
+                />
+                <div class="author-details">
+                  <p class="author-name">Martinus Livino, S.Kom., M.M., AAAIK.</p>
+                  <p class="author-info">
+                    Marketing & Sales Section Head Finance & Leasing PT. Asuransi
+                    Wahana Tata
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="author-info">
-              <p>
-                APAC EMEA Business Relations Senior Manager, Google, Inc.,
-                Silicon Valley, USA
-              </p>
+
+            <div class="testimoni-card">
+              <div class="testimoni-text">
+                <p>
+                  Kuliah di Kalbis bikin aku jadi orang yang mau belajar, soalnya
+                  kalo kuliah di sini nggak bisa nyontek...
+                </p>
+              </div>
+              <div class="author-picture">
+                <img src="images/homepage/anya.png" alt="Foto Anya Geraldine" />
+                <div class="author-details">
+                  <p class="author-name">Anya Geraldine</p>
+                  <p class="author-info">Public Figure</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimoni-card">
+              <div class="testimoni-text">
+                <p>
+                  What I love the most about Kalbis is the supportive environment. I
+                  really adore the lecturer and how amazing they are in teaching...
+                </p>
+              </div>
+              <div class="author-picture">
+                <img
+                  src="images/homepage/alicia.png"
+                  alt="Foto Alicia Beverly Weley"
+                />
+                <div class="author-details">
+                  <p class="author-name">Alicia Beverly Weley</p>
+                  <p class="author-info">Magister Management Student</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimoni-card">
+              <div class="testimoni-text">
+                <p>
+                  KALBIS has helped me to deepen and broaden my leadership skill,
+                  and fokus on the holistic picture...
+                </p>
+              </div>
+              <div class="author-picture">
+                <img
+                  src="images/homepage/reyna.png"
+                  alt="Foto Reyna Septina Budiyanti"
+                />
+                <div class="author-details">
+                  <p class="author-name">Reyna Septina Budiyanti</p>
+                  <p class="author-info">
+                    APAC EMEA Business Relations Senior Manager, Google, Inc.,
+                    Silicon Valley, USA
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       <section class="partner-section">
         <div class="partner-container" id="partnerKami">
-          <img src="images/homepage/WEB-Logo-Partner.png" alt="Partner Kami" />
+          <img
+            src="images/homepage/WEB-Logo-Partner.png"
+            alt="Partner Kami"
+          />
         </div>
       </section>
-      <section class="news-section">
-        <div class="news-container" id="beritaAcara">
+
+      <section class="news-section" id="beritaAcara">
+        <h2 class="section-title">Berita dan Acara</h2>
+        <div class="news-container">
           <div class="news-card">
             <div class="news-card-image">
               <img
-                src="images/homepage/"
+                src="images/homepage/pernyataan-resmi-kalbis-university.png"
                 alt="Banner Pernyataan Resmi Kalbis University"
               />
             </div>
             <div class="news-card-content">
-              <h2 class="title">Pernyataan Resmi dari KalbisU</h2>
-              <a href="#" class="read-more-link">
-                <span class="icon">+</span> READ MORE
+              <h3 class="title">Pernyataan Resmi dari KalbisU</h3>
+              <a
+                href="https://kalbis.ac.id/pernyataanresmikalbisu/"
+                class="read-more-link"
+              >
+                <i class="fa-solid fa-angle-right"></i> Baca Selengkapnya
               </a>
             </div>
+            <a
+              href="https://kalbis.ac.id/pernyataanresmikalbisu/"
+              class="card-overlay"
+              aria-label="Read more about Pernyataan Resmi dari KalbisU"
+            ></a>
           </div>
           <div class="news-card">
             <div class="news-card-image">
@@ -260,13 +384,21 @@
               />
             </div>
             <div class="news-card-content">
-              <h2 class="title">
+              <h3 class="title">
                 Masdika (Manajemen, 2023) Merilis Single Debut "Journey of Love"
-              </h2>
-              <a href="#" class="read-more-link">
-                <span class="icon">+</span> READ MORE
+              </h3>
+              <a
+                href="https://kalbis.ac.id/sentuhan-romansa-dalam-perjalanan-baru-masdika-merilis-single-debut-journey-of-love-bersama-ukm-kalbis-music-club/"
+                class="read-more-link"
+              >
+                <i class="fa-solid fa-angle-right"></i> Baca Selengkapnya
               </a>
             </div>
+            <a
+              href="https://kalbis.ac.id/sentuhan-romansa-dalam-perjalanan-baru-masdika-merilis-single-debut-journey-of-love-bersama-ukm-kalbis-music-club/"
+              class="card-overlay"
+              aria-label="Read more about Journey of Love"
+            ></a>
           </div>
           <div class="news-card">
             <div class="news-card-image">
@@ -276,66 +408,78 @@
               />
             </div>
             <div class="news-card-content">
-              <h2 class="title">
+              <h3 class="title">
                 Mendiktisaintek lantik Kepala LLDikti Wilayah III
-              </h2>
-              <a href="#" class="read-more-link">
-                <span class="icon">+</span> READ MORE
+              </h3>
+              <a
+                href="https://kalbis.ac.id/mendiktisaintek-lantik-kepala-lldikti-wilayah-iii/"
+                class="read-more-link"
+              >
+                <i class="fa-solid fa-angle-right"></i> Baca Selengkapnya
               </a>
             </div>
+            <a
+              href="https://kalbis.ac.id/mendiktisaintek-lantik-kepala-lldikti-wilayah-iii/"
+              class="card-overlay"
+              aria-label="Read more about Mendiktisaintek lantik Kepala LLDikti Wilayah III"
+            ></a>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="footer-container">
-        <div class="footer-info">
-          <img
-            src="images/homepage/KU_MAIN-V-qih6lkib1yxjxy4dgrudm6krndqla7clg3s2txj0u8.png"
-            alt="Logo Kalbis University"
-            class="logo"
-          />
-          <p>
-            <strong>Jl. Pulomas Selatan kav.22, Jakarta Timur 13210</strong>
-          </p>
+      <div class="footer-content">
+        <div class="footer-column footer-contact">
+          <p><strong>Jl. Pulomas Selatan kav.22, Jakarta Timur 13210</strong></p>
           <p>Telp. (021) 4788-3900</p>
           <p>Fax. (021) 4788-3651</p>
           <p>info@kalbis.ac.id</p>
         </div>
-        <div class="footer-faculties">
-          <div class="faculties-column">
-            <h3>Faculty of Business</h3>
-            <ul>
-              <li><p>Accounting (S1)</p></li>
-              <li><p>Management (S1)</p></li>
-              <li><p>Tourism (S1)</p></li>
-            </ul>
-          </div>
-          <div class="faculties-column">
-            <h3>Faculty of Computer Science & Design</h3>
-            <ul>
-              <li><p>Informatics (S1)</p></li>
-              <li><p>Information System (S1)</p></li>
-              <li><p>Visual Communication Design (S1)</p></li>
-            </ul>
-          </div>
-          <div class="faculties-column">
-            <h3>Faculty of Communication Sciences and Humanities</h3>
-            <ul>
-              <li><p>Communication (S1)</p></li>
-              <li><p>Psychology (S1)</p></li>
-            </ul>
-          </div>
+        <div class="footer-column">
+          <h3>Faculty of Business</h3>
+          <ul>
+            <li><a href="https://kalbis.ac.id/s1-akuntansi/">Accounting (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-manajemen/">Management (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-pariwisata/">Tourism (S1)</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Faculty of Computer Science & Design</h3>
+          <ul>
+            <li><a href="https://kalbis.ac.id/s1-informatika/">Informatics (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-sistem-informasi/">Information System (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-desain-komunikasi-visual/">Visual Communication Design (S1)</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Faculty of Communication Sciences and Humanities</h3>
+          <ul>
+            <li><a href="https://kalbis.ac.id/s1-komunikasi/">Communication (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-psikologi/">Psychology (S1)</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-sosmed">
-        <p>2025 © KALBIS University</p>
-        <div class="social-icons">
-          <a href="https://web.facebook.com/kalbisuniversity?_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/kalbisuniversity/#"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.youtube.com/channel/UCZF1QeGn8psVgDGL_PF0Hyw"><i class="fab fa-youtube"></i></a>
-          <a href="https://api.whatsapp.com/send/?phone=6282124422078&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+      <div class="footer-bottom">
+        <div class="footer-divider"></div>
+        <div class="footer-meta">
+          <p>2025 © KALBIS University</p>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/kalbisuniversity?_rdc=1&_rdr#"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/kalbisuniversity/#"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCZF1QeGn8psVgDGL_PF0Hyw"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=6282124422078&text&type=phone_number&app_absent=0"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
         </div>
       </div>
     </footer>
