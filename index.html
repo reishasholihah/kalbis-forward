@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/512.png">
 
     <link rel="manifest" href="/site.webmanifest">
-    
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,28 +30,56 @@
             class="navbar-logo"
             alt="Kalbis University Logo"
           />
-          <ul class="navbar-menu">
-            <li class="navbar-item">
-              <a href="#tentangKalbis" class="navbar-link">Tentang Kalbis</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#program" class="navbar-link">Program</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#testimoni" class="navbar-link">Testimoni</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#partnerKami" class="navbar-link">Partner Kami</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#beritaAcara" class="navbar-link">Berita dan Acara</a>
-            </li>
-          </ul>
-          <a
-            href="https://share.hsforms.com/1gylb_80wSne8jzME4CsdiAdu1n5"
-            class="button"
-            >Daftar Sekarang</a
-          >
+
+          <div class="navbar-desktop">
+            <ul class="navbar-menu">
+              <li class="navbar-item">
+                <a href="#tentangKalbis" class="navbar-link">Tentang Kalbis</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#program" class="navbar-link">Program</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#testimoni" class="navbar-link">Testimoni</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#partnerKami" class="navbar-link">Partner Kami</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#beritaAcara" class="navbar-link">Berita dan Acara</a>
+              </li>
+            </ul>
+            <a
+              href="https://share.hsforms.com/1gylb_80wSne8jzME4CsdiAdu1n5"
+              class="button desktop-cta"
+              >Daftar Sekarang</a
+            >
+          </div>
+
+          <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <svg id="hamburger" viewBox="0 0 60 40" class="hamburger-svg">
+              <g stroke="#2C3E50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path id="top-line" d="M10,10 L50,10"></path>
+                <path id="middle-line" d="M10,20 L50,20"></path>
+                <path id="bottom-line" d="M10,30 L50,30"></path>
+              </g>
+            </svg>
+          </button>
+
+          <div class="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+              <ul class="mobile-nav-list">
+                <li><a href="#tentangKalbis">Tentang Kalbis <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#program">Program <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#testimoni">Testimoni <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#partnerKami">Partner Kami <i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="#beritaAcara">Berita dan Acara <i class="fa-solid fa-angle-right"></i></a></li>
+              </ul>
+              <a href="https://share.hsforms.com/1gylb_80wSne8jzME4CsdiAdu1n5" class="button mobile-cta">
+                Daftar Sekarang
+              </a>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -339,7 +367,7 @@
                 href="https://kalbis.ac.id/pernyataanresmikalbisu/"
                 class="read-more-link"
               >
-                <span class="icon">➜</span> Baca Selengkapnya
+                <i class="fa-solid fa-angle-right"></i> Baca Selengkapnya
               </a>
             </div>
             <a
@@ -363,7 +391,7 @@
                 href="https://kalbis.ac.id/sentuhan-romansa-dalam-perjalanan-baru-masdika-merilis-single-debut-journey-of-love-bersama-ukm-kalbis-music-club/"
                 class="read-more-link"
               >
-                <span class="icon">➜</span> Baca Selengkapnya
+                <i class="fa-solid fa-angle-right"></i> Baca Selengkapnya
               </a>
             </div>
             <a
@@ -387,7 +415,7 @@
                 href="https://kalbis.ac.id/mendiktisaintek-lantik-kepala-lldikti-wilayah-iii/"
                 class="read-more-link"
               >
-                <span class="icon">➜</span> Baca Selengkapnya
+                <i class="fa-solid fa-angle-right"></i> Baca Selengkapnya
               </a>
             </div>
             <a
@@ -411,24 +439,24 @@
         <div class="footer-column">
           <h3>Faculty of Business</h3>
           <ul>
-            <li><a href="#">Accounting (S1)</a></li>
-            <li><a href="#">Management (S1)</a></li>
-            <li><a href="#">Tourism (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-akuntansi/">Accounting (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-manajemen/">Management (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-pariwisata/">Tourism (S1)</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Faculty of Computer Science & Design</h3>
           <ul>
-            <li><a href="#">Informatics (S1)</a></li>
-            <li><a href="#">Information System (S1)</a></li>
-            <li><a href="#">Visual Communication Design (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-informatika/">Informatics (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-sistem-informasi/">Information System (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-desain-komunikasi-visual/">Visual Communication Design (S1)</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Faculty of Communication Sciences and Humanities</h3>
           <ul>
-            <li><a href="#">Communication (S1)</a></li>
-            <li><a href="#">Psychology (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-komunikasi/">Communication (S1)</a></li>
+            <li><a href="https://kalbis.ac.id/s1-psikologi/">Psychology (S1)</a></li>
           </ul>
         </div>
       </div>
