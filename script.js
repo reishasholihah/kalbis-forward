@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.setAttribute('aria-hidden', 'true');
       });
     });
-}
+  }
 
   const bannerContainer = document.querySelector('.banner-carousel .carousel-container');
   if (bannerContainer) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressBar = bannerContainer.querySelector('.progress-bar');
     let currentIndex = 0;
     const totalSlides = slides.length;
-    const intervalDuration = 10000;
+    const intervalDuration = 8000;
     let autoPlay;
 
     function showSlide(index) {
@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('testimoni-track');
   if (track) {
     let isPaused = false;
+    let startX = 0;
+    let scrollLeft = 0;
 
     const pause = () => {
       track.style.animationPlayState = 'paused';
@@ -80,9 +82,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    track.addEventListener('pointerdown', pause);
-    track.addEventListener('pointerup', resume);
-    track.addEventListener('mouseleave', resume);
-    track.addEventListener('mouseenter', pause);
+    const handlePointerDown = (e) => {
+      startX = e.clientX || e.touches?.[0]?.clientX || 0;
+      scrollLeft = track.scrollLeft;
+      pause();
+    };
+
+    const handlePointerMove = (e) => {
+      if (!startX) return;
+      const x = e.clientX || e.touches?.[0]?.clientX || 0;
+      const walk = (x - startX);
+      track.scrollLeft = scrollLeft - walk;
+    };
+
+    const handlePointerUp = () => {
+      startX = 0;
+      resume();
+    };
+
+    const handlePointerLeave = () => {
+      if (startX === 0) resume();
+    };
+
+    track.addEventListener('pointerdown', handlePointerDown);
+    track.addEventListener('pointermove', handlePointerMove);
+    track.addEventListener('pointerup', handlePointerUp);
+    track.addEventListener('pointerleave', handlePointerLeave);
+
+    track.addEventListener('touchstart', handlePointerDown, { passive: false });
+    track.addEventListener('touchmove', handlePointerMove, { passive: false });
+    track.addEventListener('touchend', handlePointerUp, { passive: false });
   }
 });
